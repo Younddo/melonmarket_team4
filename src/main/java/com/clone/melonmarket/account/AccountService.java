@@ -99,7 +99,7 @@ public class AccountService {
         //토큰을 header에 넣어서 클라이언트에게 전달하기
         setHeader(response, tokenDto);
 
-        return new LoginResponseDto(account.getAccountName(), "Success Login", HttpStatus.OK.value());
+        return new LoginResponseDto(account.getAccountName(), "Success Login", HttpStatus.ACCEPTED.value());
     }
 
     private void setHeader(HttpServletResponse response, TokenDto tokenDto) {
